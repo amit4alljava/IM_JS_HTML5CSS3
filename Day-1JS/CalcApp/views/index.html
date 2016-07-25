@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/models/calcmodel.js"></script>
+    <script src="../js/controllers/calccontroller.js"></script>
+</head>
+<body>
+    <table >
+        <tr>
+            <td><label for="">FirstNo</label></td>
+            <td><input type="text" id="firstno" placeholder="Type First Number"><span id="firstno_error"></span></td>
+        </tr>
+        <tr>
+            <td><label for="">SecondNo</label></td>
+            <td><input type="text" id="secondno" placeholder="Type Second Number">
+            <span id="secondno_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td><button>+</button></td>
+                        <td><button>-</button></td>
+                        <td><button>*</button></td>
+                        <td><button>/</button></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <h1 id="result"></h1>
+</body>
+</html>
