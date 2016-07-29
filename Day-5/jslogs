@@ -1,0 +1,212 @@
+var e =(function(a,b){
+var c = a + b;
+return c;
+})(100,200);
+undefined
+e;
+300
+function print(){
+console.log("Print Call ");
+}
+undefined
+var show=function(){
+console.log("Show Call ");
+}
+undefined
+print();
+Print Call 
+undefined
+show();
+Show Call 
+undefined
+function Calc(){
+var x = 100;
+var y = 200;
+var add = function(){
+return x + y;
+}
+var sub = function(){
+return x - y;
+}
+add();
+sub();
+}
+undefined
+Calc();
+undefined
+function Calc(){
+var x = 100;
+var y = 200;
+var add = function(){
+return x + y;
+}
+var sub = function(){
+return x - y;
+}
+console.log(add());
+console.log(sub());
+}
+undefined
+Calc();
+300
+-100
+undefined
+function adder(x){
+function add(y){
+return x + y;
+}
+return adder;
+}
+undefined
+function adder(x){
+function add(y){
+return x + y;
+}
+return add;
+}
+undefined
+var x= adder(100);
+undefined
+x(900);
+1000
+ var cache={};
+    function getPrime(num){
+    var isPrime = true;
+    if(typeof(cache[num])!=="undefined"){
+        console.log("Coming from the Cache.... It is Prime No "+cache[num]);
+        isPrime = true;
+        return isPrime;
+    }
+        else
+    {
+        if(num<=3){
+            isPrime = true;
+            cache[num]=num;
+            console.log("Processed....");
+            return isPrime;
+        }
+        else
+        {
+            for(var i = 2; i<=num-1; i++){
+                if(num% i ===0){
+                    isPrime= false;
+
+                    console.log("Processed....");
+                    break;
+
+                }
+            }
+            if(isPrime===true){
+                cache[num]=num;
+                console.log("Prime Number "+num);
+
+            }
+            else
+            {
+
+                console.log("Not a Prime Number "+num);
+            }
+        }
+        return isPrime;
+    }
+
+    }
+
+undefined
+cache;
+Object {}
+getPrime(3);
+Processed....
+true
+cache;
+Object {3: 3}
+getPrime(3);
+Coming from the Cache.... It is Prime No 3
+true
+getPrime(5);
+Prime Number 5
+true
+cache;
+Object {3: 3, 5: 5}
+function Employee(id,name,salary){
+this.id = id;
+this.name = name;
+this.salary = salary;
+}
+undefined
+function Product(id,name,price){
+this.id = id;
+this.name = name;
+this.price= price;
+}
+undefined
+function print(){
+console.log("Id "+this.id);
+console.log("Name "+this.name);
+}
+undefined
+var ram = new Employee(1001,"Ram",99999);
+undefined
+var p = new Product(1002,"Nokia",22222);
+undefined
+print.apply(ram);
+Id 1001
+Name Ram
+undefined
+print.apply(p);
+Id 1002
+Name Nokia
+undefined
+function print(){
+for(var i  = 0; i<arguments.length; i++){
+console.log(" Extra Value is ",arguments[i]); 
+}
+console.log("Id "+this.id);
+console.log("Name "+this.name);
+}
+undefined
+print.apply(p,[ram.salary,888,666,777]);
+ Extra Value is  99999
+ Extra Value is  888
+ Extra Value is  666
+ Extra Value is  777
+Id 1002
+Name Nokia
+undefined
+print.apply(ram,[ram.salary,888,666,777]);
+ Extra Value is  99999
+ Extra Value is  888
+ Extra Value is  666
+ Extra Value is  777
+Id 1001
+Name Ram
+undefined
+var e = [ram.salary,54545,65767,"IT"]
+undefined
+print.apply(ram,e);
+ Extra Value is  99999
+ Extra Value is  54545
+ Extra Value is  65767
+ Extra Value is  IT
+Id 1001
+Name Ram
+undefined
+e;
+[99999, 54545, 65767, "IT"]
+ram;
+Employee {id: 1001, name: "Ram", salary: 99999}
+print.call(ram,ram.salary,43543,65656);
+ Extra Value is  99999
+ Extra Value is  43543
+ Extra Value is  65656
+Id 1001
+Name Ram
+undefined
+var w = print.bind(p);
+undefined
+w(999,111);
+ Extra Value is  999
+ Extra Value is  111
+Id 1002
+Name Nokia
+undefined
