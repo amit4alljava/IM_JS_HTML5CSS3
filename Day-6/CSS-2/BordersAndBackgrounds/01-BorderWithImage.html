@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .simple{
+            border:10px solid transparent;
+            -webkit-border-image: url("image/dots.png") 30% stretch; /* Chrome and Safari */
+            -moz-border-image: url("image/dots.png") 30% stretch; /* FireFox */
+            -o-border-image: url("image/dots.png") 30% stretch; /* Opera */
+            ms-border-image:url("image/dots.png") 30% stretch; /* Microsoft */
+            border-image: url("image/dots.png") 30% stretch;  /* Universal */
+        }
+        .rounded{
+            border:10px solid transparent;
+            border-image: url("image/rounded.png") 30% repeat;
+        }
+        .doubleline{
+            border:10px solid transparent;
+            border-image: url("image/double_line.png") 30% repeat;
+        }
+    </style>
+</head>
+<body>
+<p class="simple">this is the sample of the Border Image......</p>
+<p class="rounded">This is the rounded border style demo....</p>
+<p class="doubleline">This is the Double Line Example.....</p>
+</body>
+</html>

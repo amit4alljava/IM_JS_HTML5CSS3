@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div1 , .div2 {
+            padding: 20px;
+        }
+        .div1 {
+            background-color: darkgrey;
+        }
+        .div2 {
+            background-color: mediumturquoise;
+        }
+        .div1 > p {
+            font-size: 24px;
+        }
+        .div1 + p {
+            font-size: 20px;
+            padding: 10px;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+<h1>More ways to use the selectors</h1>
+<h2>div > p :- Select all the p elements where the parent is div</h2>
+<h2>div + p :- Select immediate p element of div</h2>
+<h2>div , p :- Select all div and all p</h2>
+<h2>div  p :- Select all p element inside div elements</h2>
+<div class="div1">
+    <p>This paragraph is inside first div</p>
+    <div class="div2">
+        <h2>This is another div here</h2>
+        <p>This paragraph is inside second div</p>
+    </div>
+</div>
+<p>This paragraph is immediate of first div</p>
+</body>
+</html>

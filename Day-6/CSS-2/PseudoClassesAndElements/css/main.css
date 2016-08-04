@@ -1,0 +1,111 @@
+h2{
+    font-size: 36px;
+}
+/* --------- hover --------- */
+.hover-demo, .hover-demo2 {
+    padding: 30px;
+    background: #f5f5f5;
+    text-align: center;
+}
+.hover-demo h3{
+    display: none;
+}
+.hover-demo:hover{
+    background: #a5a5a5;
+}
+.hover-demo2:hover{
+    background: #a5a5a5;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    -ms-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+/* ------- Focus ------------- */
+.focus-demo{
+    text-align: center;
+}
+.focus-demo input[type="text"]{
+    width: 400px;
+    height: 50px;
+    background: #f5f5f5;
+    font-size: 20px;
+    padding: 0px 20px;
+    border: 1px solid #f5f5f5;
+}
+.focus-demo input[type="text"]:focus{
+    background: #a5a5a5;
+    border: 1px solid forestgreen;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    -ms-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+/* After-Before */
+.after-before-demo {
+    background: #ff823d;
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+
+.after-before-demo::before {
+    border-bottom: 50px solid transparent;
+    border-left: 40px solid #ff823d;
+    border-right: 40px solid #ff823d;
+    bottom: -50px;
+    content: "";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    width: 0;
+}
+.after-before-demo::after {
+    border-bottom: 75px solid transparent;
+    border-left: 80px solid #ff823d;
+    border-top: 65px solid transparent;
+    bottom: -50px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -80px;
+    top: 0;
+    width: 0;
+}
+
+/* Pseudo-Elements */
+ul li {
+    font-size: 24px;
+    line-height: 30px;
+    display: inline;
+    margin: 0px 30px;
+    padding: 10px;
+}
+ul li:first-child {
+    background: #f5f5f5;
+}
+ul li:last-child:hover{
+    background: #f5f5f5;
+}
+ul li:nth-child(3){
+    background: #a5a5a5;
+}
+ul li:nth-child(even){
+    background: #ff823d;
+}
+
+/* Button */
+.button1{
+    height: 52px;
+    width:  50px;
+    background-color: #ff823d;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #ff823d;
+}
+.button1:hover{
+    background: #ffffff;
+    color: #ff823d;
+}

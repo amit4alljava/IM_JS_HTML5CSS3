@@ -1,0 +1,40 @@
+h1 {
+    font-family: "Century", Gadget, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+}
+p {
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: darkmagenta;
+}
+.letter-spacing {
+    letter-spacing: 2px;
+}
+.word-spacing {
+    word-spacing: 10px;
+}
+.text-indent {
+    text-indent: 20px;
+}
+.text-align {
+    text-align: right;
+}
+.underline {
+    text-decoration: underline;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.over-line {
+    text-decoration: overline;
+}
+.text-direction {
+    direction: rtl;
+}
+.text-shadow {
+    text-shadow: 2px 2px #ff0000;
+}

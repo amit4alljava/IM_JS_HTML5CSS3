@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example1;
+    animation-duration: 4s;
+    margin-bottom: 20px;
+}
+
+
+/* Standard syntax */
+@keyframes example1 {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+    
+    #div2 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+        position: relative;
+    -webkit-animation-name: example2; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example2;
+    animation-duration: 4s;
+}
+
+/* Standard syntax */
+@keyframes example2 {
+    0%   {background-color: red;}
+    25%  {background-color: yellow; left: 100px;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+    
+</style>
+</head>
+<body>
+<h1>The keyframe rule</h1>
+<p> When an animation is finished, it changes back to its original style.</p>
+In this we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)).
+<div id="div1"></div>
+
+<p>In this we have specified when the style will change the background-color of the element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+<div id="div2"></div>
+
+</body>
+</html>
+

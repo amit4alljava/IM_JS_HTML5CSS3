@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .borderimg1 {
+            border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 stretch; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 stretch;
+        }
+        .borderimg2 {
+            border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30% round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30% round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30% round;
+        }
+        .borderimg3 {
+            border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) round; /* Opera 11-12.1 */
+    border-image: url(border.png) round;
+    border-image-slice: 50;
+        }
+    </style>
+</head>
+<body>
+    <p class="borderimg1">Image as a border</p>
+    <p class="borderimg2">Border-image with different Slice Values</p>
+    <p class="borderimg3">Border-image with different Slice Values</p>
+    
+    <p> 
+    Original Image is <br>
+    <img src="border.png" alt="">
+    </p>
+</body>
+</html>
